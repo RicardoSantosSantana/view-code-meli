@@ -49,7 +49,7 @@ export default function Home() {
             paddingBottom: "20px"
           }
           }>Client ID</label>
-          <textarea placeholder="insert client id here" cols="30" rows="5" style={{display: 'block',padding:"2px", marginBottom:"10px", fontSize:"1.1rem"}} type="text" onChange={(e) => setClientId(e.target.value)} id="txt_client_id" name="txt_client_id"></textarea>
+          <input placeholder="insert client id here" style={{display: 'block',padding:"2px", marginBottom:"10px", fontSize:"1.1rem"}} type="text" onChange={(e) => setClientId(e.target.value)} id="txt_client_id" name="txt_client_id"></input>
           <button type="submit">Get Code</button>
         </form>
       </main >
