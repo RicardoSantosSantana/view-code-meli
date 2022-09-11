@@ -6,6 +6,9 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
 
+  var today = new Date();
+  var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear()+'-'+' '+today.getHours()+':'+today.getMinutes()+':'+today.getSeconds();
+
   const [client_id, setClientId] = useState("")
 
   const submit = function (e) {
@@ -14,7 +17,7 @@ export default function Home() {
     const redirect_uri = "https://code.ricardo.dev.br"
     const url = `https://auth.mercadolivre.com.br/authorization?response_type=code&client_id=${client_id}&redirect_uri=${redirect_uri}&state=rcx@fdf.dw`
     window.location = url;
-    
+
     console.log(url)
 
   }
@@ -33,7 +36,9 @@ export default function Home() {
         <h1 className={styles.title}>
           Code <a href="#">Mercado Livre</a>
         </h1>
-
+        <p>
+        {date}
+        </p>
         <p className={styles.description}>
           {query?.code}
         </p>
